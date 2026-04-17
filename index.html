@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CMS - Calculateur de Moyenne</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HOME -->
+<div id="home">
+
+  <h1 class="logo">CMS</h1>
+  <p class="subtitle">Calculateur de Moyenne Scolaire</p>
+
+  <div class="signature">
+    <p class="brand">SMN</p>
+  </div>
+
+  <button class="btn" onclick="entrer()">Entrer</button>
+</div>
+
+<!-- APP -->
+<div id="app">
+
+  <h1>Calcul des Moyennes</h1>
+
+  <div class="card">
+    <h2>Moyenne Générale</h2>
+    <h1 id="moyenne">--</h1>
+    <p id="totalPoints">Total des points : --</p>
+    <p id="mention"></p>
+  </div>
+
+  <div id="container"></div>
+
+  <button class="btn" onclick="ajouterMatiere()">➕ Ajouter Matière</button>
+  <button class="btn" onclick="calculer()">📊 Calculer</button>
+  <button class="btn reset" onclick="resetCMS()">🔄 Réinitialiser</button>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+<footer class="footer">
+  <p>@SidyNdiaye2026</p>
+</footer>

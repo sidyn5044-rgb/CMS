@@ -1,0 +1,249 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+/* HOME */
+#home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-size: 60px;
+  color: #a78bfa;
+}
+
+.subtitle {
+  opacity: 0.7;
+}
+
+/* SIGNATURE */
+.signature {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.brand {
+  font-size: 14px;
+  color: #9ca3af;
+  letter-spacing: 3px;
+}
+
+/* BUTTON */
+.btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background: #6d28d9;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #5b21b6;
+}
+
+/* APP */
+#app {
+  display: none;
+  padding: 20px;
+}
+
+/* CARD */
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+/* ===== BLOCS 3D ===== */
+.matiere {
+  background: #1e293b;
+  padding: 12px;
+  border-radius: 14px;
+  margin: 12px 0;
+
+  box-shadow:
+    0 10px 20px rgba(0,0,0,0.4),
+    0 0 0 1px rgba(255,255,255,0.05);
+
+  transform: perspective(800px) rotateX(2deg);
+
+  transition: 0.3s ease;
+  position: relative;
+}
+
+/* hover 3D */
+.matiere:hover {
+  transform: perspective(800px) rotateX(0deg) translateY(-5px);
+  box-shadow:
+    0 20px 30px rgba(0,0,0,0.5),
+    0 0 15px rgba(167,139,250,0.3);
+}
+
+/* superposition */
+.matiere:nth-child(odd) {
+  transform: perspective(800px) rotateX(2deg) translateX(-3px);
+}
+
+.matiere:nth-child(even) {
+  transform: perspective(800px) rotateX(2deg) translateX(3px);
+}
+
+/* INPUTS */
+.matiere .row {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.matiere input {
+  width: 60px;
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+  text-align: center;
+}
+
+.matiere .nom {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+/* MOYENNE */
+.moyenne-matiere {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* COULEURS */
+.rouge { color: #ef4444; }
+.orange { color: #f59e0b; }
+.vert { color: #22c55e; }
+
+/* 📱 MOBILE FIX */
+@media (max-width: 768px) {
+
+  .matiere {
+    transform: none !important;
+    margin: 10px 0;
+  }
+
+  .matiere .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .matiere input {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  #app {
+    padding: 10px;
+  }
+
+  .logo {
+    font-size: 40px;
+  }
+
+  .card {
+    text-align: center;
+  }
+}
+.footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 15px;
+  color: #a78bfa;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+/* 📚 NOM DE MATIÈRE STYLE PRO */
+.matiere .nom {
+  width: 100%;
+  padding: 10px;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  border-radius: 10px;
+  border: none;
+
+  background: rgba(167, 139, 250, 0.15);
+  color: #a78bfa;
+
+  outline: none;
+
+  margin-bottom: 10px;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  text-align: center;
+
+  box-shadow: 0 0 10px rgba(167, 139, 250, 0.15);
+}
+
+/* ✨ effet focus */
+.matiere .nom:focus {
+  background: rgba(167, 139, 250, 0.25);
+  box-shadow: 0 0 15px rgba(167, 139, 250, 0.4);
+  transform: scale(1.02);
+  transition: 0.2s ease;
+}
+
+/* placeholder propre */
+.matiere .nom::placeholder {
+  color: #c4b5fd;
+  font-style: italic;
+  text-transform: none;
+}
+.matiere:nth-child(1) .nom { color: #60a5fa; }
+.matiere:nth-child(2) .nom { color: #34d399; }
+.matiere:nth-child(3) .nom { color: #fbbf24; }
+.matiere:nth-child(4) .nom { color: #f472b6; }
+#totalPoints {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #a78bfa;
+}
+.delete-btn {
+  margin-top: 10px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+
+  background: #ef4444;
+  color: white;
+
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.delete-btn:hover {
+  background: #dc2626;
+}
+.reset {
+  background: #ef4444;
+}
+
+.reset:hover {
+  background: #dc2626;
+}
